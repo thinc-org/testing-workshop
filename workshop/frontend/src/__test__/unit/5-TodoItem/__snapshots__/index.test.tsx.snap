@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoItem should render correctly 1`] = `
+<div>
+  <div>
+    <input
+      type="checkbox"
+    />
+    <p
+      style="color: rgb(153, 153, 153);"
+    >
+      text
+    </p>
+    <button>
+      delete
+    </button>
+  </div>
+</div>
+`;

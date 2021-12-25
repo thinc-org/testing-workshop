@@ -8,7 +8,7 @@ interface TodoItemProps {
 }
 
 const TodoItem: React.FC<TodoItemProps> = ({ text, checked, onChange }) => {
-  const textColor = checked ? "#999" : "#000"
+  const textColor = checked ? "#000" : "#999"
 
   const { handleOpen } = useDialog("Delete Todo", "Are you sure you want to delete this todo?")
 

@@ -29,3 +29,5 @@ describe("formatPrice", () => {
     expect(result).toBe(expected)
   })
 })
+
+export {}

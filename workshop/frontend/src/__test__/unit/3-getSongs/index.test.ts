@@ -21,6 +21,7 @@ describe("getSongs", () => {
   ]
 
   const isLoggedInSpy = jest.fn()
+  const axiosSpy = jest.spyOn(axios, "get")
 
   jest.doMock("./isLoggedIn", () => isLoggedInSpy)
 
@@ -38,20 +39,22 @@ describe("getSongs", () => {
 
     mockAxios.onGet("/api/songs").reply(200, mockSongs)
 
-    const { default: getSongs } = await await import(".")
+    const { default: getSongs } = await import(".")
     const result = await getSongs()
 
     expect(isLoggedInSpy).toHaveBeenCalledTimes(1)
+    expect(axiosSpy).toBeCalledTimes(1)
     expect(result).toEqual(mockSongs)
   })
 
-  it("should return null if user didn't log in", async () => {
+  it("should return null if user didn't logged in", async () => {
     isLoggedInSpy.mockReturnValue(false)
 
-    const { default: getSongs } = await await import(".")
+    const { default: getSongs } = await import(".")
     const result = await getSongs()
 
     expect(isLoggedInSpy).toHaveBeenCalledTimes(1)
+    expect(axiosSpy).toBeCalledTimes(0)
     expect(result).toBeNull()
   })
 })
