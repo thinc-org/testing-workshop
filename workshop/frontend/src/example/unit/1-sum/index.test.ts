@@ -20,3 +20,5 @@ describe("sum", () => {
     expect(result).toBe(-4)
   })
 })
+
+export {}

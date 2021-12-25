@@ -7,9 +7,14 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "cypress": "cypress open",
+    "cypress:headless": "cypress run"
   },
   "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/material": "^5.2.5",
     "axios": "^0.24.0",
     "next": "12.0.7",
     "react": "17.0.2",
@@ -20,10 +25,14 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/react-hooks": "^7.0.2",
     "@types/axios": "^0.14.0",
+    "@types/enzyme": "^3.10.10",
     "@types/jest": "^27.0.3",
     "@types/node": "17.0.4",
     "@types/react": "17.0.38",
     "axios-mock-adapter": "^1.20.0",
+    "cypress": "^9.2.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "8.5.0",
     "eslint-config-next": "12.0.7",
     "typescript": "4.5.4"
