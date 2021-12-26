@@ -32,6 +32,7 @@
     "rxjs": "^7.4.0"
   },
   "devDependencies": {
+    "@jest-mock/express": "^1.4.5",
     "@nest/testing": "^4.5.4",
     "@nestjs/cli": "^7.0.0",
     "@nestjs/schematics": "^7.0.0",
@@ -70,7 +71,8 @@
       "^src/(.*)$": "<rootDir>/$1",
       "^test/(.*)$": "<rootDir>/../test/$1"
     },
-    "coverageDirectory": "../coverage",
+    "coverageDirectory": "coverage",
+    "collectCoverage": true,
     "testEnvironment": "node"
   }
 }

@@ -53,18 +53,18 @@ export class CatController {
 
   @Delete(':catId')
   @HttpCode(HttpStatus.ACCEPTED)
-  async kill(
+  async sell(
     @Res() res: Response,
     @Param('catId') catId: string,
   ): Promise<void> {
     await this.catService.sellCat(catId)
-    res.json({ message: 'Kill Success' })
+    res.json({ message: 'Sell Success' })
   }
 
   @Delete()
   @HttpCode(HttpStatus.ACCEPTED)
-  async clear(@Res() res: Response): Promise<void> {
+  async sellAll(@Res() res: Response): Promise<void> {
     await this.catService.sellAllCats()
-    res.json({ message: 'Kill All Success' })
+    res.json({ message: 'Sell All Success' })
   }
 }
