@@ -27,6 +27,9 @@ const CardList: React.FC<CardListProps> = ({ initialCards }) => {
         <CardItem key={index} {...card} color={color} />
       ))}
       <Input
+        inputProps={{
+          "aria-label": "card-color-picker",
+        }}
         type="color"
         value={color}
         onChange={handleColorChange}
