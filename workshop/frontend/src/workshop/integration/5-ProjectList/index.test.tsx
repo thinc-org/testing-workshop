@@ -1,3 +1,5 @@
+// thinc-org/SCCU-frontend
+
 describe("useProjectList", () => {
   // This is integration so do not try to mock/stub any components if necessary
   it.todo("Should display projects correctly at initial state");
