@@ -1,9 +1,5 @@
 import axios from 'axios'
-
-
-const SITE_URL = process.env.SITE_URL
-const BACKEND_URI = process.env.BACKEND_URI
-const ENVIRONMENT = process.env.ENVIRONMENT
+import { SITE_URL, BACKEND_URI, ENVIRONMENT } from './environments'
 
 const isClient = typeof window !== 'undefined'
 
