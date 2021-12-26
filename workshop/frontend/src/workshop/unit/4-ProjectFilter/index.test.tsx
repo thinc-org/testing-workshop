@@ -1,12 +1,26 @@
 // thinc-org/SCCU-frontend
 
+import { shallow } from "enzyme";
+import ProjectFilterItem from "./ProjectFilterItem";
+
 describe("ProjectFilter", () => {
   // Reminder: You have to mock ProjectFilterItem because this is unit test not integration test
-  it.todo(`Write test for rendering component
-            1. Check for "Apply" button text
-            2. Check for types are mapped correctly by ProjectFilterItem with correct key, type
-            3. Check for "หัวข้อ" text
-    `);
+
+  it("Should render component correctly", async () => {
+    const { default: ProjectFilter } = await import(".");
+
+    const mockTypes = ["type1", "type2", "type3"];
+    const wrapper = shallow(<ProjectFilter types={mockTypes} />);
+
+    console.log(wrapper.children(), "wrapper");
+    const titleWrapper = wrapper.childAt(0);
+    const typesListWrapper = wrapper.childAt(1);
+    const applyWrapper = wrapper.childAt(2);
+
+    expect(titleWrapper.text()).toMatch("หัวข้อ");
+    expect(typesListWrapper.children().length).toBe(mockTypes.length);
+    expect(applyWrapper.text()).toMatch("APPLY");
+  });
 });
 
 export {};
