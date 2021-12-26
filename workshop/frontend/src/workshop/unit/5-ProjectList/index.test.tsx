@@ -1,9 +1,9 @@
 // thinc-org/SCCU-frontend
 
 describe("ProjectList", () => {
-  // Hint: Try to seperate ProjectList into 2 functions
-  // 1. useProjectList
-  // 2. ProjectList that use useProjectList
+  // Hint: Try to seperate ProjectList (index.tsx) into 2 functions
+  // 1. useProjectList.tsx
+  // 2. ProjectList (index.tsx) that import useProjectList.tsx
   // Then test each file individually as index.test.tsx, useProjectList.test.tsx
 
   it.todo(`Test shallow rendering when mocked every external functions/hooks
