@@ -1,22 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import ProjectSearchBar from "./ProjectSearchBar";
 import ProjectItem from "./ProjectItem";
 import { Project } from "./types";
+import useProjectList from "./useProjectList";
 
 export interface ProjectListPropsType {
   initialProjects: Project[];
 }
 
 const ProjectList: React.FC<ProjectListPropsType> = ({ initialProjects }) => {
-  const [projects, setProjects] =
-    useState<{ id: string; title: string; owner: string }[]>(initialProjects);
-
-  const filterProjectHandler = (query: string) => {
-    setProjects(
-      initialProjects.filter((project) => project.title.includes(query))
-    );
-  };
-
+  const { filterProjectHandler, projects } = useProjectList(initialProjects);
   return (
     <div className="flex justify-center">
       <div className="flex flex-col justify-center items-center w-[90%] space-y-[14px] my-8 text-[#222224]">

@@ -1,11 +1,8 @@
 // thinc-org/SCCU-frontend
 
 import { shallow } from "enzyme";
-import ProjectFilterItem from "./ProjectFilterItem";
 
 describe("ProjectFilter", () => {
-  // Reminder: You have to mock ProjectFilterItem because this is unit test not integration test
-
   it("Should render component correctly", async () => {
     const { default: ProjectFilter } = await import(".");
 

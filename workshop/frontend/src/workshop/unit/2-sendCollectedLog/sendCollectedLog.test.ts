@@ -2,7 +2,6 @@
 import * as ORIGINAL_ENV from './environments'
 
 describe('sendCollectedLog', () => {
-        // Reminder: Since this is unit tets, you have to mock ./httpClient with jest
         const postSpy = jest.fn()
 
         const mockEnviroment = {

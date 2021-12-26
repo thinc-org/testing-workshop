@@ -71,7 +71,7 @@ describe("useExhibitionData", () => {
 
   it("Should return null if pageType is not a key of ExhibitionData", () => {
     const mockPageType = "UNKNOWN_KEY";
-    const { result } = renderHook(() => useExhibitionData(mockPageType));
+    const { result } = renderHook(() => useExhibitionData(mockPageType as any));
     expect(result.current.type).toBe(null);
     expect(result.current.contentData).toBe(null);
     expect(result.current.changePage).toBeDefined();
