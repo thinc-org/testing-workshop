@@ -3,7 +3,7 @@ Content-Type: application/json
   
 ###
 
-GET http://localhost:3000/cat/61c8085cdfe77dd4e1f0dbfc
+GET http://localhost:3000/cat/:id
 Content-Type: application/json
 
 ###

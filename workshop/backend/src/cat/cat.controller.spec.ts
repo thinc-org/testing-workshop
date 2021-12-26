@@ -12,7 +12,7 @@ describe('CatController', () => {
     const module: TestingModule = await Test.createTestingModule({
       imports: [
         rootMongooseTestModule(),
-        MongooseModule.forFeature([{ name: 'cat', schema: CatSchema }]),
+        MongooseModule.forFeature([{ name: 'Cat', schema: CatSchema }]),
       ],
       controllers: [CatController],
       providers: [CatService],

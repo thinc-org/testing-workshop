@@ -57,14 +57,14 @@ export class CatController {
     @Res() res: Response,
     @Param('catId') catId: string,
   ): Promise<void> {
-    await this.catService.killCat(catId)
+    await this.catService.sellCat(catId)
     res.json({ message: 'Kill Success' })
   }
 
   @Delete()
   @HttpCode(HttpStatus.ACCEPTED)
   async clear(@Res() res: Response): Promise<void> {
-    await this.catService.clearCats()
+    await this.catService.sellAllCats()
     res.json({ message: 'Kill All Success' })
   }
 }
