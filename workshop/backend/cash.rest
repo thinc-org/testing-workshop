@@ -1,0 +1,27 @@
+GET http://localhost:3000/cash
+Content-Type: application/json
+  
+###
+
+GET http://localhost:3000/cash/;id
+Content-Type: application/json
+  
+###
+
+POST http://localhost:3000/cash
+Content-Type: application/json
+
+{
+  "ownerId": "saenyakorn",
+  "ownerName": "Yu",
+  "balance": 400
+}
+
+###
+
+PATCH http://localhost:3000/cash/;id
+Content-Type: application/json
+
+{
+  "amount": 400
+}
