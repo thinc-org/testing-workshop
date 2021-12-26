@@ -1,7 +1,6 @@
 describe('getClassPeriod', () => {
-    it('Shoulde be true', () => {
-        expect(true).toBe(true)
-    })
+    it.todo('Write test when period is defined')
+    it.todo('Write test when period is not defined')
 })
 
-export {}
+export { }
