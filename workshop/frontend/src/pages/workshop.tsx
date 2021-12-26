@@ -6,11 +6,15 @@ import { mockTypes } from "../workshop/unit/4-ProjectFilter/mocks";
 
 const Home: NextPage = () => {
   return (
-    <div>
-      ProjectList
-      <ProjectList initialProjects={initialProjects} />
-      ------------------------------------------------- ProjectFilter
-      <ProjectFilter types={mockTypes} />
+    <div className="flex flex-col">
+      ------------------------------------------------- Project List - For
+      Integration test
+      <div>
+        <ProjectList initialProjects={initialProjects} />
+      </div>
+      ------------------------------------------------- ProjectFilter - For
+      refernece
+      <ProjectFilter className="relative" types={mockTypes} />
     </div>
   );
 };
