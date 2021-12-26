@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "test": "playwright test",
+    "test:debug": "PWDEBUG=1 playwright test",
+    "test:codegen": "playwright codegen"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.17.1",
+    "playwright": "^1.17.1"
+  }
+}
