@@ -1,10 +1,14 @@
 // thinc-org/lawfest-2021
 
 describe("useExhibitionData", () => {
-  it.todo("Write test for init useExhibitionData");
+  it.todo(`Test: Should call useExhibitionData correctly and return expected result
+          Recommend using it.each to loop all pageType
+  `);
   it.todo(
-    `Write test for changePage multiple times resulting in both data == null and data != null. Recommend using it.each
-    `
+    "Test: Should change page correctly adn stop changing page if reach last page"
+  );
+  it.todo(
+    "Test: Should return null if pageType is not a key of ExhibitionData"
   );
 });
 
