@@ -12,7 +12,7 @@ export class CashService {
   }
 
   async getUserInfo(userId: string): Promise<CashDocument | null> {
-    return await this.cashModel.findOne({ owner: userId }).exec()
+    return await this.cashModel.findOne({ ownerId: userId }).exec()
   }
 
   async createUser(userInfo: Cash): Promise<CashDocument> {
@@ -41,7 +41,7 @@ export class CashService {
 
     return await this.cashModel
       .findOneAndUpdate(
-        { owner: userId },
+        { ownerId: userId },
         { balance: userInfo.balance + amount },
         { new: true },
       )

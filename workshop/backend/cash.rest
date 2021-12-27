@@ -3,7 +3,7 @@ Content-Type: application/json
   
 ###
 
-GET http://localhost:3000/cash/;id
+GET http://localhost:3000/cash/new
 Content-Type: application/json
   
 ###
@@ -12,14 +12,14 @@ POST http://localhost:3000/cash
 Content-Type: application/json
 
 {
-  "ownerId": "saenyakorn",
-  "ownerName": "Yu",
+  "ownerId": "new",
+  "ownerName": "Norapat",
   "balance": 400
 }
 
 ###
 
-PATCH http://localhost:3000/cash/;id
+PATCH http://localhost:3000/cash/new
 Content-Type: application/json
 
 {

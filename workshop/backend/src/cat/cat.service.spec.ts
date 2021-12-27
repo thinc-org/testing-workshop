@@ -144,6 +144,14 @@ describe('CatService', () => {
       expect(cats).toBeDefined()
       expect(cats.length).toBe(2)
     })
+
+    it('should find cat parent', async () => {
+      const mockCat = await CatModel.findOne({ name: 'cat2' })
+
+      const cats = await service.findParentCats(mockCat._id)
+
+      expect(cats).toEqual([])
+    })
   })
 
   describe('sellCat', () => {
@@ -153,7 +161,7 @@ describe('CatService', () => {
       expect(fn()).rejects.toThrow(Error)
     })
 
-    it('should sell a cat', async () => {
+    it('should sell nothing if cat does not exist', async () => {
       expect(await CatModel.countDocuments({})).toBe(5)
 
       const newId = new mongoose.mongo.ObjectId().toString()
@@ -164,7 +172,7 @@ describe('CatService', () => {
       expect(soldCat).toBeNull()
     })
 
-    it('should sell nothing if cat does not exist', async () => {
+    it('should sell a cat', async () => {
       const soldCat = await CatModel.findOne({})
 
       await service.sellCat(soldCat._id)

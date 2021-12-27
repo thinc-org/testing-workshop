@@ -24,7 +24,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/cat/:id
+DELETE http://localhost:3000/cat/61c979b576741647c3901779
 Content-Type: application/json
 
 ###
