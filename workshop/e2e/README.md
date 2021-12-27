@@ -35,5 +35,5 @@ yarn test:debug --headed
 นอกจากนี้เรายังสามารถ generate e2e test ได้โดยการใช้คำสั่ง
 
 ```bash
-yarn test:codegen
+yarn test:codegen <url>
 ```

@@ -26,8 +26,8 @@ brew install yarn
 
 เมื่อคุณมี `yarn` แล้วให้เริ่มต้นโดยการเข้าไปที่ folder [workshop](/workshop) ภายในนั้นจะมีตัวอย่างของ Test ทั้งหมด 3 ประเภทได้แก่
 
-1. [Unit Test](/workshop/unit)
-2. [Integration Test](/workshop/integration)
+1. [Frontend Unit + Integration Test](/workshop/frontend)
+2. [Backend Unit + Integration Test](/workshop/backend)
 3. [E2E Test](/workshop/e2e)
 
 ในการ Test แต่ละรูปแบบ อย่าลืมอ่าน `README.md` ก่อนเสมอ เผื่อเป็นการ setup environment ก่อนเริ่ม Workshop
